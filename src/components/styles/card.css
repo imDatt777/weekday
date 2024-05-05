@@ -6,6 +6,7 @@
 }
 
 .posted {
+    margin: 20px 16px 10px;
     box-shadow: rgba(6, 6, 6, 0.05) 0px 2px 6px 0px;
     border-radius: 10px;
     border: 1px solid rgb(230, 230, 230);
