@@ -1,0 +1,137 @@
+.job-card {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px 0px;
+    max-width: 360px;
+    padding: 5px;
+}
+
+.posted {
+    box-shadow: rgba(6, 6, 6, 0.05) 0px 2px 6px 0px;
+    border-radius: 10px;
+    border: 1px solid rgb(230, 230, 230);
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 4px 6px;
+    width: 120px;
+}
+
+.details {
+    padding: 8px 16px;
+}
+
+.company {
+    display: flex;
+    gap: 8px;
+}
+
+.logo {
+    height: 40px;
+    width: 25px;
+}
+
+.comp {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+    color: #8b8b8b;
+}
+
+.role {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+
+.loc {
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+
+.est {
+    color: #4d596a;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 8px 0;
+}
+
+.ab-com {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.ab-us {
+    font-size: 14px;
+}
+
+.job-det {
+    color: rgba(0, 0, 0, 0.87);
+    white-space: pre-wrap;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
+}
+
+.job-det::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 1)
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+.min-exp {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 10px 0 3px;
+    color: #8b8b8b;
+}
+
+.exp {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.apply {
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    background-color: rgb(85, 239, 196);
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 8px;
+    margin: 5px 0;
+    height: 45px;
+    border: 0px;
+}
+
+.view-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-job {
+    color: #4943da;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+}
