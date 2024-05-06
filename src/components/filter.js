@@ -5,9 +5,13 @@ import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import InputLabel from "@mui/material/InputLabel";
 
 // Importing Stylesheet
 import "../styles/filter.css";
+
+// Importing Static Data
+import { location, mode, roles, techStack } from "../utils/filters.staticData";
 
 const Filter = () => {
     const [exp, setExp] = useState("");
@@ -20,49 +24,6 @@ const Filter = () => {
     const handleSalChange = (event) => {
         setSal(event.target.value);
     };
-
-    const roles = [
-        { title: "Frontend" },
-        { title: "Backend" },
-        { title: "Full Stack" },
-        { title: "Database" },
-        { title: "Java" },
-        { title: "React" },
-        { title: "IOS" },
-        { title: "Android" },
-        { title: "Mobile" },
-        { title: "Web" },
-    ];
-
-    const techStack = [
-        { title: "React" },
-        { title: "HTML" },
-        { title: "CSS" },
-        { title: "JavaScript" },
-        { title: "Redux" },
-        { title: "Next" },
-        { title: "SASS" },
-        { title: "Tailwind CSS" },
-        { title: "Angular" },
-        { title: "React Native" },
-    ];
-
-    const location = [
-        { title: "Delhi" },
-        { title: "Gurugram" },
-        { title: "Noida" },
-        { title: "Bangalore" },
-        { title: "Pune" },
-        { title: "Mumbai" },
-        { title: "Chennai" },
-        { title: "Hyderabad" },
-    ];
-
-    const mode = [
-        { title: "Remote" },
-        { title: "On-Site" },
-        { title: "Hybrid" },
-    ];
 
     return (
         <div className='filter'>
@@ -114,21 +75,26 @@ const Filter = () => {
                 options={mode}
                 getOptionLabel={(option) => option.title}
                 renderInput={(params) => (
-                    <TextField
-                        {...params}
-                        placeholder='Location'
-                        size='small'
-                    />
+                    <TextField {...params} placeholder='Remote' size='small' />
                 )}
                 sx={{ minWidth: "200px" }}
             />
-            <TextField id='outlined-basic' variant='outlined' size='small' />
-            <FormControl sx={{ m: 1, minWidth: 120 }} size='small'>
+            <TextField
+                id='outlined-basic'
+                placeholder='Search Company'
+                variant='outlined'
+                size='small'
+            />
+            <FormControl sx={{ m: 1, minWidth: 200 }} size='small'>
+                <InputLabel id='demo-simple-select-label'>
+                    Experience
+                </InputLabel>
                 <Select
                     labelId='demo-select-small-label'
                     id='demo-select-small'
                     value={exp}
                     onChange={handleExpChange}
+                    label='Experience'
                 >
                     <MenuItem value={1}>1</MenuItem>
                     <MenuItem value={2}>2</MenuItem>
@@ -139,12 +105,16 @@ const Filter = () => {
                     <MenuItem value={7}>7</MenuItem>
                 </Select>
             </FormControl>
-            <FormControl sx={{ m: 1, minWidth: 120 }} size='small'>
+            <FormControl sx={{ m: 1, minWidth: 200 }} size='small'>
+                <InputLabel id='demo-simple-select-label'>
+                    Minimum Base Pay
+                </InputLabel>
                 <Select
                     labelId='demo-select-small-label'
                     id='demo-select-small'
                     value={sal}
                     onChange={handleSalChange}
+                    label='Minimum Base Pay'
                 >
                     <MenuItem value={"10L"}>10L</MenuItem>
                     <MenuItem value={"20L"}>20L</MenuItem>
