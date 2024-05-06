@@ -22,9 +22,8 @@ const Card = ({ job }) => {
                     </div>
                 </div>
                 <p className='est'>
-                    Estimated Salary: {job.salaryCurrencyCode} {job.minJdSalary}{" "}
-                    - {job.maxJdSalary}
-                    <span> ✅</span>
+                    Estimated Salary: {job.salaryCurrencyCode} {job.minJdSalary}
+                    K - {job.maxJdSalary}K<span> ✅</span>
                 </p>
                 <h3 className='ab-com'>About Company:</h3>
                 <p className='ab-us'>
