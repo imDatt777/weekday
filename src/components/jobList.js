@@ -7,7 +7,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Card from "./card";
 
 // Importing Stylesheet
-import "./styles/jobList.css";
+import "../styles/jobList.css";
 
 const JobList = () => {
     const [jobs, setJobs] = useState([]);

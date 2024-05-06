@@ -2,7 +2,7 @@
 import React from "react";
 
 // Importing Stylesheet
-import "./styles/card.css";
+import "../styles/card.css";
 
 const Card = ({ job }) => {
     return (
